@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: producer-${PRODUCER_ID:producer-ERROR}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${PEER_1_URL:http://eurekaserver.com/eureka}
+#    register-with-eureka: true
+#    fetch-registry: true
