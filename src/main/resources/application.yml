@@ -7,3 +7,6 @@ eureka:
       defaultZone: ${PEER_1_URL:http://eurekaserver.com/eureka}
 #    register-with-eureka: true
 #    fetch-registry: true
+logging:
+  logstash:
+    destination: ${LOGSTASH_DESTINATION:localhost:5000}
