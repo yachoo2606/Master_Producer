@@ -1,6 +1,10 @@
 spring:
   application:
     name: producer-${PRODUCER_ID:producer-ERROR}
+
+server:
+  port: 9000
+
 eureka:
   client:
     service-url:
@@ -10,3 +14,10 @@ eureka:
 logging:
   logstash:
     destination: ${LOGSTASH_DESTINATION:localhost:5000}
+
+#name of products file
+
+products:
+  file:
+    name: "products.json"
+  count: 1000
