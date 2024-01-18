@@ -36,8 +36,6 @@ public class ProductsService {
         ObjectMapper objectMapper = new ObjectMapper();
         List<Product> tempProducts;
         try{
-            System.out.println(this.productFileName);
-            System.out.println(this.count);
             tempProducts = objectMapper.readValue(productsFile, new TypeReference<List<Product>>(){} );
         }catch (IOException e) {
             log.error("Producer was unable to read products from file");
