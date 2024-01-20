@@ -13,7 +13,9 @@ eureka:
 #    fetch-registry: true
 logging:
   logstash:
-    destination: ${LOGSTASH_DESTINATION:localhost:5000}
+    destinationOne: ${LOGSTASH_DESTINATION_ONE:localhost:5000}
+    destinationTwo: ${LOGSTASH_DESTINATION_TWO:localhost:5001}
+    destinationThree: ${LOGSTASH_DESTINATION_THREE:localhost:5002}
 
 #name of products file
 
