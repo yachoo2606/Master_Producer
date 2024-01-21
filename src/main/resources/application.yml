@@ -18,8 +18,13 @@ logging:
     destinationThree: ${LOGSTASH_DESTINATION_THREE:localhost:5002}
 
 #name of products file
-
 products:
   file:
     name: "products.json"
   count: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
