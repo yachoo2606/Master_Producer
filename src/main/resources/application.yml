@@ -3,12 +3,12 @@ spring:
     name: producer-${PRODUCER_ID:producer-ERROR}
 
 server:
-  port: 9000
+  port: ${PORT:10000}
 
 eureka:
   client:
     service-url:
-      defaultZone: ${PEER_1_URL:http://eurekaserver.com/eureka}
+      defaultZone: ${PEER_1_URL:http://localhost:8761/eureka}
 #    register-with-eureka: true
 #    fetch-registry: true
 logging:
