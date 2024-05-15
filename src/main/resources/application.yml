@@ -1,9 +1,16 @@
 spring:
   application:
     name: producer-${PRODUCER_ID:producer-ERROR}
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
 
 server:
   port: ${PORT:10000}
+  tomcat:
+    max-swallow-size: 209715200
+    max-http-form-post-size: 209715200
 
 eureka:
   client:
