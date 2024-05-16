@@ -14,6 +14,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -46,5 +47,9 @@ public class ProductsService {
 
     public List<Product> getAllProducts() {
         return products;
+    }
+
+    public Optional<Product> getProductByName(Product product) {
+        return products.stream().filter(listProduct -> product.getName().equals(listProduct.getName()) && product.getAmount()<= listProduct.getAmount()).findAny();
     }
 }
