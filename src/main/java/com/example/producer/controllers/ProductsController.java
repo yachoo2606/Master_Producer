@@ -35,7 +35,7 @@ public class ProductsController {
         if(foundProduct.isPresent()){
             return ResponseEntity.ok().body(foundProduct.get());
         }else {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.ok().body(null);
         }
     }
 }
