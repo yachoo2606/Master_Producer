@@ -1,12 +1,16 @@
 package com.example.producer.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
+    String id;
     String name;
     String model;
     String producer;
@@ -15,19 +19,19 @@ public class Product {
 
     @Override
     public String toString(){
-        return new StringBuilder()
-                .append("[ name=")
-                .append(name)
-                .append(", model=")
-                .append(model)
-                .append(", producer=")
-                .append(producer)
-                .append(", amount=")
-                .append(amount)
-                .append("price=")
-                .append(price)
-                .append("]")
-                .toString();
+        return "[id = "+
+                id+
+                ", name=" +
+                name +
+                ", model=" +
+                model +
+                ", producer=" +
+                producer +
+                ", amount=" +
+                amount +
+                "price=" +
+                price +
+                "]";
     }
 
 }

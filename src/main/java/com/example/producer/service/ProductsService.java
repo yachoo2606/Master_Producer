@@ -50,6 +50,6 @@ public class ProductsService {
     }
 
     public Optional<Product> getProductByName(Product product) {
-        return products.stream().filter(listProduct -> product.getName().equals(listProduct.getName()) && product.getAmount()<= listProduct.getAmount()).findAny();
+        return products.stream().filter(listProduct ->  product.getId().equals(listProduct.getId())  && product.getAmount()<= listProduct.getAmount()).findAny();
     }
 }
