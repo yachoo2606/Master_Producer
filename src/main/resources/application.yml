@@ -28,7 +28,7 @@ logging:
 products:
   file:
     name: "products.json"
-  count: 1000
+  count: ${NUMBER_OF_PRODUCTS:1000}
 
 management:
   endpoints:
